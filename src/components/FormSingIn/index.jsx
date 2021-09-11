@@ -30,6 +30,16 @@ export const FormSingIn = () => {
      <FormTitle title="SingIn" occupytwocolumns="true" />
 
      <FormInput
+      label="Created on"
+      type="date"
+      id="createdOn"
+      name="createdOn"
+      readOnly
+      title="read only"
+      occupytwocolumns="true"
+     />
+
+     <FormInput
       label="Firs Name"
       type="text"
       id="firstName"
@@ -49,7 +59,7 @@ export const FormSingIn = () => {
 
      <FormInput label="Date of birth" type="date" id="dateOfBirth" name="dateOfBirth" />
 
-     <FormInput label="Age" type="number" id="age" name="age" />
+     <FormInput label="Age" type="number" id="age" name="age" min="18" max="90" />
 
      <FormInput
       label="Email"
