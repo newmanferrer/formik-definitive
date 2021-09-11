@@ -16,6 +16,7 @@ export const formSingInInitialValues = {
  css: false,
  sass: false,
  styledComponents: false,
+ favoriteColor: '#000000',
  comments: '',
  terms: false
 };
