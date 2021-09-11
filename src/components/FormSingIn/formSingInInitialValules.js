@@ -1,8 +1,11 @@
+import { normalizeDateFormat } from '../../helpers';
+
 export const formSingInInitialValues = {
+ createdOn: normalizeDateFormat(),
  firstName: '',
  lastName: '',
  dateOfBirth: '',
- age: '',
+ age: 18,
  email: '',
  confirmEmail: '',
  password: '',
