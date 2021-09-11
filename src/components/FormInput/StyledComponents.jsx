@@ -63,7 +63,8 @@ const Label = styled.label`
 //* ---------------------------------------------------------------------------
 const FormikFieldStyled = styled(Field)`
  width: 100%;
- padding: 0.5rem;
+ height: ${({ type }) => (type === 'color' ? '2rem' : '')};
+ padding: ${({ type }) => (type === 'color' ? '0' : '0.5rem')};
 
  font-family: Arial, Helvetica, sans-serif;
  font-size: 1.2rem;
@@ -79,8 +80,8 @@ const FormikFieldStyled = styled(Field)`
   box-shadow: 0 0 3px 3px ${COLORS.white};
  }
 
- ${({ as }) =>
-  as !== 'select'
+ ${({ as, type }) =>
+  as !== 'select' && type !== 'color'
    ? css`
       &:read-only {
        cursor: not-allowed;
