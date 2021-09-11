@@ -6,6 +6,7 @@ import { listOfDatabases } from '../../listOfDatabases';
 import { listOfFrameworksJavaScript } from '../../listOfFrameworksJavaScript';
 
 export const formSingInValidationSchema = yup.object().shape({
+ createdOn: yup.date().required('created on is a required field'),
  firstName: yup
   .string()
   .trim()
@@ -84,3 +85,14 @@ export const formSingInValidationSchema = yup.object().shape({
  comments: yup.string().trim().max(255, 'maximum 255 characters'),
  terms: yup.boolean().required('terms and conditions is required')
 });
+
+/* const schema = yup.object().shape({
+ createdOn: yup.date().required()
+});
+
+schema
+ .validate({
+  createdOn: new Date()
+ })
+ .then((result) => console.log(result))
+ .catch((error) => console.log(error)); */
