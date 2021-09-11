@@ -163,6 +163,14 @@ export const FormSingIn = () => {
      </FormInputRadCheWrapper>
 
      <FormInput
+      label="Your favorite color"
+      type="color"
+      id="favoriteColor"
+      name="favoriteColor"
+      occupytwocolumns="true"
+     />
+
+     <FormInput
       label="Comments"
       as="textarea"
       id="comments"
@@ -172,7 +180,12 @@ export const FormSingIn = () => {
       occupytwocolumns
      />
 
-     <FormInputRadCheWrapper id="terms" name="terms" occupytwocolumns>
+     <FormInputRadCheWrapper
+      id="terms"
+      name="terms"
+      title="Terms and conditions"
+      border
+      occupytwocolumns>
       <FormInputRadChe
        label="I accept the terms and conditions"
        type="checkbox"
