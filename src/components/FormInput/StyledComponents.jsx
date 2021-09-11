@@ -4,7 +4,7 @@
 //* ===========================================================================
 //* 1.- Imports
 //* ===========================================================================
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { COLORS } from '../../colors';
 import { Field, ErrorMessage } from 'formik';
 //* ===========================================================================
@@ -78,6 +78,18 @@ const FormikFieldStyled = styled(Field)`
   border: ${({ error }) => (error ? `1px solid ${COLORS.error}` : `1px solid ${COLORS.hover}`)};
   box-shadow: 0 0 3px 3px ${COLORS.white};
  }
+
+ ${({ as }) =>
+  as !== 'select'
+   ? css`
+      &:read-only {
+       cursor: not-allowed;
+       color: ${COLORS.white};
+       border: 1px solid ${COLORS.white};
+       background-color: ${COLORS.background};
+      }
+     `
+   : ''}
 `;
 //* ---------------------------------------------------------------------------
 
