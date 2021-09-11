@@ -79,20 +79,13 @@ export const formSingInValidationSchema = yup.object().shape({
   .string()
   .oneOf(listOfFrameworksJavaScript, `valid values: ${listOfFrameworksJavaScript}`)
   .required('one framework is required'),
- css: yup.boolean().oneOf([true, false], 'only true or false is valid'),
- sass: yup.boolean().oneOf([true, false], 'only true or false is valid'),
- styledComponents: yup.boolean().oneOf([true, false], 'only true or false is valid'),
+ css: yup.boolean(),
+ sass: yup.boolean(),
+ styledComponents: yup.boolean(),
+ favoriteColor: yup.string().required('favorite color is a required field'),
  comments: yup.string().trim().max(255, 'maximum 255 characters'),
- terms: yup.boolean().required('terms and conditions is required')
+ terms: yup
+  .boolean()
+  .oneOf([true], 'terms and conditions is required')
+  .required('terms and conditions is required')
 });
-
-/* const schema = yup.object().shape({
- createdOn: yup.date().required()
-});
-
-schema
- .validate({
-  createdOn: new Date()
- })
- .then((result) => console.log(result))
- .catch((error) => console.log(error)); */
