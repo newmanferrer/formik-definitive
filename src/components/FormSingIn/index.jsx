@@ -47,13 +47,9 @@ export const FormSingIn = () => {
       placeholder="doe"
      />
 
-     <FormInput
-      label="Date of birth"
-      type="date"
-      id="dateOfBirth"
-      name="dateOfBirth"
-      occupytwocolumns="true"
-     />
+     <FormInput label="Date of birth" type="date" id="dateOfBirth" name="dateOfBirth" />
+
+     <FormInput label="Age" type="number" id="age" name="age" />
 
      <FormInput
       label="Email"
@@ -119,18 +115,30 @@ export const FormSingIn = () => {
 
      <FormInputRadCheWrapper
       id="react"
-      name="framework"
-      title="Select the best frontend framework"
+      name="frameworkJavaScript"
+      title="Select the best framework JavaScript"
       border
       occupytwocolumns>
-      <FormInputRadChe label="React" type="radio" id="react" name="framework" value="react" />
-      <FormInputRadChe label="Vue" type="radio" id="vue" name="framework" value="vue" />
-      <FormInputRadChe label="Angular" type="radio" id="angular" name="framework" value="angular" />
+      <FormInputRadChe
+       label="React"
+       type="radio"
+       id="react"
+       name="frameworkJavaScript"
+       value="react"
+      />
+      <FormInputRadChe label="Vue" type="radio" id="vue" name="frameworkJavaScript" value="vue" />
+      <FormInputRadChe
+       label="Angular"
+       type="radio"
+       id="angular"
+       name="frameworkJavaScript"
+       value="angular"
+      />
      </FormInputRadCheWrapper>
 
      <FormInputRadCheWrapper
       id="css"
-      name="cssframework"
+      name="frameworkCss"
       title="Select the css frameworks you use"
       border
       occupytwocolumns>
@@ -154,12 +162,7 @@ export const FormSingIn = () => {
       occupytwocolumns
      />
 
-     <FormInputRadCheWrapper
-      id="terms"
-      name="terms"
-      title="Terms and conditions"
-      border
-      occupytwocolumns>
+     <FormInputRadCheWrapper id="terms" name="terms" occupytwocolumns>
       <FormInputRadChe
        label="I accept the terms and conditions"
        type="checkbox"

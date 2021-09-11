@@ -5,7 +5,7 @@ export const FormInputRadChe = (props) => {
   <Label htmlFor={props.id}>
    {props.label}
    <FormikFieldStyled {...props} />
-   <Figure figuretype={props.type} />
+   <Figure figuretype={props.type ? props.type : 'radio'} />
   </Label>
  );
 };
